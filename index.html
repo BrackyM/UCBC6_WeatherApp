@@ -21,10 +21,7 @@
         <form>
           <div>
             <div class="searchField">
-              <lablel for="inputCity">Search:</lablel>
-              <input type="text" placeholder="City" id="inputCity" />
-            </div>
-            <div class="button">
+              <input type="text" placeholder="Search for City" id="inputCity" />
               <button type="submit" class="searchBtn" id="search-btn">
                 Search <i class="button-symbol"></i>
               </button>
@@ -33,119 +30,137 @@
         </form>
 
         <div class="search-history">
-          <div class="search-history-header">
-            <h2>Search History</h2>
+          <div class="search-history-list">
+            <!--Generate search-history-list using JavaScript-->
           </div>
-        </div>
-
-        <div class="search-history-list">
-          <!--Generate search-history-list using JavaScript-->
         </div>
       </div>
 
       <!--Current / 5 Day Forecast-->
-      <div class="weather-box">
+      <h2 id="city">City</h2>
+      <h2 id="today-forecast">Today's Forecast</h2>
+      <div class="weather-box card col-lg-2 col-md-12 col-sm-12">
         <div class="weather-box-content">
           <!--Current section-->
-          <div class="current-weather">
+          <div class="current-weather card-body">
             <div class="current-weather-title">
-              <h2 id="city">City</h2>
-              <h2 id="date">Date</h2>
-              <img id="icon" />
+              <h3 id="date">Date</h3>
             </div>
-
+            <img class="icon" id="icon" />
             <p class="current-weather-details">
               Temperature: <span id="temperature"></span>°F
             </p>
             <p class="current-weather-details">
-              UV Index:<span id="uv-index"></span>
+              UV Index: <span id="uv-index"></span>
             </p>
             <p class="current-weather-details">
-              Humidity:<span id="humidity"></span> %
+              Humidity: <span id="humidity"></span>%
             </p>
             <p class="current-weather-details">
-              Wind Speed:<span id="wind"></span> MPH
+              Wind Speed: <span id="wind"></span> MPH
             </p>
           </div>
+        </div>
+      </div>
+      <!--5 day section-->
 
-          <!--5 day section-->
-
-          <div class="five-day">
-            <h2>5 Day Forecast</h2>
-            <!--Seperated Days for the 5 day forecast-->
-            <div class="five-day-box">
-              <div class="day-1-box">
-                <div class="day-1-box-inside day-0">
-                  <div class="day-1-box-content">
-                    <p class="day-date">Day 1</p>
-                    <img class="icon" />
-                    <p class="days-temp">
-                      Temperature: <span id="five-day-temp"></span>°F
-                    </p>
-                    <p class="days-humid">
-                      Humidity <span id="five-day-humid"></span>%
-                    </p>
-                  </div>
+      <div class="five-day container">
+        <h2>5 Day Forecast</h2>
+        <!--Seperated Days for the 5 day forecast-->
+        <div class="five-day-box row">
+          <div class="day-1-box card col-lg-2 col-md-12 col-sm-12">
+            <div class="day-1-box-inside day-0">
+              <div class="day-1-box-content card-body">
+                <p class="day-date">Day 1</p>
+                <img class="icon" />
+                <p class="days-temp">
+                  Temperature: <span id="five-day-temp"></span>°F
+                </p>
+                <p class="days-humid">
+                  Humidity <span id="five-day-humid"></span>%
+                </p>
+                <p class="days-windspeed">
+                  Humidity <span id="five-day-wind"></span>%
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--Seperated Days for the 5 day forecast-->
+          <div class="card col-lg-2 col-md-12 col-sm-12">
+            <div class="day-2-box">
+              <div class="day-2-box-inside day-1">
+                <div class="day-2-box-content card-body">
+                  <p class="day-date">Day 2</p>
+                  <img class="icon" />
+                  <p class="days-temp five-day-desc">
+                    Temperature: <span id="five-day-temp"></span>°F
+                  </p>
+                  <p class="days-humid five-day-desc">
+                    Humidity <span id="five-day-humid"></span>%
+                  </p>
+                  <p class="days-windspeed five-day-desc">
+                    Humidity <span id="five-day-wind"></span>%
+                  </p>
                 </div>
               </div>
-              <!--Seperated Days for the 5 day forecast-->
-              <div class="day-2-box">
-                <div class="day-2-box-inside day-1">
-                  <div class="day-2-box-content">
-                    <p class="day-date">Day 2</p>
-                    <img class="icon" />
-                    <p class="days-temp">
-                      Temperature: <span id="five-day-temp"></span>°F
-                    </p>
-                    <p class="days-humid">
-                      Humidity <span id="five-day-humid"></span>%
-                    </p>
-                  </div>
+            </div>
+          </div>
+          <!--Seperated Days for the 5 day forecast-->
+          <div class="card col-lg-2 col-md-12 col-sm-12">
+            <div class="day-3-box">
+              <div class="day-3-box-inside day-2">
+                <div class="day-3-box-content card-body">
+                  <p class="day-date">Day 3</p>
+                  <img class="icon" />
+                  <p class="days-temp five-day-desc">
+                    Temperature: <span id="five-day-temp"></span>°F
+                  </p>
+                  <p class="days-humid five-day-desc">
+                    Humidity <span id="five-day-humid"></span>%
+                  </p>
+                  <p class="days-windspeed five-day-desc">
+                    Humidity <span id="five-day-wind"></span>%
+                  </p>
                 </div>
               </div>
-              <!--Seperated Days for the 5 day forecast-->
-              <div class="day-3-box">
-                <div class="day-3-box-inside day-2">
-                  <div class="day-3-box-content">
-                    <p class="day-date">Day 3</p>
-                    <img class="icon" />
-                    <p class="days-temp">
-                      Temperature: <span id="five-day-temp"></span>°F
-                    </p>
-                    <p class="days-humid">
-                      Humidity <span id="five-day-humid"></span>%
-                    </p>
-                  </div>
+            </div>
+          </div>
+          <!--Seperated Days for the 5 day forecast-->
+          <div class="card col-lg-2 col-md-12 col-sm-12">
+            <div class="day-4-box">
+              <div class="day-4-box-inside day-3">
+                <div class="day-4-box-content card-body">
+                  <p class="day-date">Day 4</p>
+                  <img class="icon" />
+                  <p class="days-temp five-day-desc">
+                    Temperature: <span id="five-day-temp"></span>°F
+                  </p>
+                  <p class="days-humid five-day-desc">
+                    Humidity <span id="five-day-humid"></span>%
+                  </p>
+                  <p class="days-windspeed five-day-desc">
+                    Humidity <span id="five-day-wind"></span>%
+                  </p>
                 </div>
               </div>
-              <!--Seperated Days for the 5 day forecast-->
-              <div class="day-4-box">
-                <div class="day-4-box-inside day-3">
-                  <div class="day-4-box-content">
-                    <p class="day-date">Day 4</p>
-                    <img class="icon" />
-                    <p class="days-temp">
-                      Temperature: <span id="five-day-temp"></span>°F
-                    </p>
-                    <p class="days-humid">
-                      Humidity <span id="five-day-humid"></span>%
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!--Seperated Days for the 5 day forecast-->
-              <div class="day-5-box">
-                <div class="day-5-box-inside day-4">
-                  <div class="day-5-box-content">
-                    <p class="day-date">Day 5</p>
-                    <img class="icon" />
-                    <p class="days-temp">
-                    <span id="five-day-temp"></span>
-                    </p>
-                    <p class="days-humid">
-                      Humidity <span id="five-day-humid"></span>
-                    </p>
-                  </div>
+            </div>
+          </div>
+          <!--Seperated Days for the 5 day forecast-->
+          <div class="card col-lg-2 col-md-12 col-sm-12">
+            <div class="day-5-box">
+              <div class="day-5-box-inside day-4">
+                <div class="day-5-box-content card-body">
+                  <p class="day-date">Day 5</p>
+                  <img class="icon" />
+                  <p class="days-temp">
+                    <span id="five-day-temp five-day-desc"></span>
+                  </p>
+                  <p class="days-humid">
+                    Humidity <span id="five-day-humid five-day-desc"></span>
+                  </p>
+                  <p class="days-windspeed">
+                    Humidity <span id="five-day-wind five-day-desc"></span>%
+                  </p>
                 </div>
               </div>
             </div>
@@ -154,8 +169,24 @@
       </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+      integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
