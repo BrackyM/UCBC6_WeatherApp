@@ -1,6 +1,6 @@
 $(document).ready(function () {
+  // Global Constants
   const apiKey = "3a9ec11d25dfef4ddd17214483eecf37";
-
   const cityCon = $("h2#city");
   const dateCon = $("h3#date");
   const tempCon = $("span#temperature");
@@ -9,9 +9,9 @@ $(document).ready(function () {
   const uvCon = $("span#uv-index");
   const cityListCon = $("div.search-history-list");
   const weatherIconCon = $("img#icon");
-
   const userSearch = $("#inputCity");
 
+  // Creating Past City array with a blank value
   let pastCities = [];
 
   function compare(a, b) {
@@ -63,6 +63,8 @@ $(document).ready(function () {
     });
   }
 
+  // UV Index background color changing
+
   function uvIndexColor(uvi) {
     if (uvi < 3) {
       return "green";
@@ -75,6 +77,7 @@ $(document).ready(function () {
     } else return "purple";
   }
 
+  // Main function to call the current day forecast
   function callWeather(queryURL) {
     $.ajax({
       url: queryURL,
@@ -99,8 +102,10 @@ $(document).ready(function () {
       weatherIconCon
         .attr("src", `http://openweathermap.org/img/wn/${weatherIcon}.png`)
         .attr("alt", response.weather[0].description);
+      // Temperature adjusted from Metric to Imperial 
       tempCon.html(((response.main.temp - 273.15) * 1.8 + 32).toFixed(1));
       humidCon.text(response.main.humidity);
+      // WindSpeed adjusted from Metric to Imperial
       windCon.text((response.wind.speed * 2.237).toFixed(1));
 
       let lat = response.coord.lat;
@@ -119,11 +124,13 @@ $(document).ready(function () {
             uvColor === "yellow" ? "black" : "white"
           }`
         );
+        // Displays 5 day Forecast data for selected city
         let fiveDay = response.daily;
         console.log(response);
         // 5 day forecast
         for (let i = 0; i <= 5; i++) {
           let today = fiveDay[i + 1];
+          // Appending the API Weather Information to the index.html document
           $(`div.day-${i} .day-date`).text(moment.unix(today.dt).format("L"));
           $(`div.day-${i} .icon`)
             .attr(
@@ -146,6 +153,8 @@ $(document).ready(function () {
       });
     });
   }
+
+  // Search History Button information storage and display
 
   function displaySearchHistory() {
     if (pastCities[0]) {

@@ -1,3 +1,5 @@
+/* Global Variables */
+
 h1 {
   background-color: grey;
   color: white;
@@ -19,6 +21,8 @@ h2 {
   opacity: 75%;
 }
 
+/* Search Bar */
+
 .search-section {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,8 @@ h2 {
   display: flex;
   padding-top: 25px;
 }
+
+/* Weather Forecast */
 
 #city {
   background-color: grey;
