@@ -32,15 +32,15 @@ JavaScript Screenshots
 
 * Screenshot 1: UV Index Color Changing
 
-![App Screenshot](assets\screenshot1.JPG)
+![App Screenshot](/assets/screenshot1.JPG)
 
 * Screenshot 2: Changing Metric to Imperial Measurements
 
-![App Screenshot](assets\screenshot2.JPG)
+![App Screenshot](/assets/screenshot2.JPG)
 
 * Screenshot 3: 5 Day Forecast Information Appending
 
-![App Screenshot](assets\screenshot3.JPG)
+![App Screenshot](/assets/screenshot3.JPG)
 
 ## Assignment Links
 
