@@ -42,6 +42,10 @@ JavaScript Screenshots
 
 ![App Screenshot](/assets/screenshot3.JPG)
 
+* Screenshot 4: Final Application
+
+![App Screenshot](/assets/screenshot4.JPG)
+
 ## Assignment Links
 
 - [Weather API](https://openweathermap.org/api)
